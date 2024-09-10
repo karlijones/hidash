@@ -4,5 +4,5 @@ module.exports = {
             const value = arr[i];
             fn(value, i);
         }
-    };
+    }
 };
