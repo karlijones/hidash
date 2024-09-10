@@ -3,7 +3,11 @@ const { forEach, map } = require('./index');
 
 const test = (desc, fn) => {
     console.log('----', desc);
-    fn();
+    try{
+        fn();
+    } catch (err) {
+        console.log(err.message);
+    }
 };
 
 
