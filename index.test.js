@@ -1,3 +1,4 @@
+const assert = require('assert');
 const { forEach, map } = require('./index');
 
 
@@ -16,11 +17,9 @@ test('The forEach function', () => {
     forEach([1,2,3], (value) => {
         sum += value;
     });
-    
-    if (sum !== 6) {
-        throw new Error('Expected summing array to equal 6');
-        }
-    });
+
+    assert.strictEqual(sum, 6, 'Expected forEach to sum the array');
+});
 
 test('The map function', () => {
     const result = map([1,2,3], value => {
